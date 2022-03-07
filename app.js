@@ -16,7 +16,11 @@ function getResults(query) {
     `https://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&APPID=8070f39242c0e4c7ac7a1cb709976198`
   )
     .then((weather) => {
-      return weather.json();
+      if (weather.ok) {
+        return weather.json();
+      } else {
+        alert("Invalid City!");
+      }
     })
     .then(displayResults);
 }
