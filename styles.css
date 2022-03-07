@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body {
+  background-color: rgb(181, 216, 247);
+}
+
 .header {
   text-align: center;
   margin-top: 30px;
