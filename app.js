@@ -30,9 +30,11 @@ function displayResults(weather) {
   let city = document.querySelector(".city");
   city.innerText = `${weather.name}, ${weather.sys.country}`;
   let temperature = document.querySelector(".temp");
-  temperature.innerText = `${weather.main.temp} °C`;
+  temperature.innerText = `Current: ${weather.main.temp} °C`;
   let currentWeather = document.querySelector(".weather");
-  currentWeather.innerText = `${weather.weather[0].main}`;
+  let icon = document.querySelector(".icon");
+  icon.src = `https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`;
+  currentWeather.innerText = `${weather.weather[0].description}`;
   let highLow = document.querySelector(".highLow");
-  highLow.innerHTML = `${weather.main.temp_max} / ${weather.main.temp_min}<span> °C</span>`;
+  highLow.innerHTML = `Maximum: ${weather.main.temp_max} / Minimum: ${weather.main.temp_min}<span> °C</span>`;
 }

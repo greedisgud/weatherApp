@@ -6,12 +6,29 @@
 }
 
 body {
-  background-color: rgb(181, 216, 247);
+  background: url("./nature.jpeg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .header {
-  text-align: center;
-  margin-top: 30px;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(190, 201, 245, 0.9);
+  margin-bottom: 60px;
+}
+
+input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid white;
+  font-size: 25px;
 }
 
 .mainContainer {
@@ -20,22 +37,79 @@ body {
   justify-content: center;
   margin: auto;
   align-items: center;
-  height: 80vh;
-  gap: 400px;
+  height: 700px;
+  width: 550px;
+  gap: 200px;
+  background: rgba(2, 99, 30, 0.9);
+  border-radius: 16px;
+  color: #ffffff;
 }
 
 .city {
-  font-size: 30px;
+  font-size: 60px;
+  font-weight: bold;
   font-style: italic;
 }
 
 .date {
-  font-weight: bold;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .temperature {
   display: flex;
   flex-direction: column;
+  text-align: center;
   gap: 40px;
   font-size: 30px;
+}
+
+button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: border-color 0.2s ease;
+  -webkit-transition: border-color 0.2s ease;
+  -ms-transition: border-color 0.2s ease;
+  transition: border-color 0.2s ease;
+  background-color: transparent;
+  border: solid 1px !important;
+  border-color: rgba(255, 255, 255, 0.781) !important;
+  border-radius: 3em;
+  color: #ffffff !important;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  height: calc(4.75em + 2px);
+  letter-spacing: 0.25em;
+  line-height: 4.75em;
+  outline: 0;
+  padding: 0 3.75em;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-size: 10px;
+}
+
+button:hover {
+  background-color: rgb(47, 89, 255);
+  transition: ease 0.5s;
+  cursor: pointer;
+}
+
+.icon {
+  width: 70px;
+  background: rgba(190, 201, 245, 0.8);
+  border-radius: 40px;
+}
+
+.currentWeather {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
